@@ -1,0 +1,12 @@
+{
+  "name": "SimpliBot",
+  "displayName": "SimpliBot",
+  "expo": {
+    "name": "SimpliBot",
+    "slug": "SimpliBot",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
