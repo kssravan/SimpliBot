@@ -6,11 +6,10 @@ import android.net.Uri;
 
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
-import com.guichaguri.trackplayer.TrackPlayer;
+import com.oblador.vectoricons.VectorIconsPackage;
 import com.zmxv.RNSound.RNSoundPackage;
 import com.rnim.rn.audio.ReactNativeAudioPackage;
 import com.reactnativecommunity.rnpermissions.RNPermissionsPackage;
-import com.dooboolab.RNAudioRecorderPlayerPackage;
 import com.reactnativecommunity.netinfo.NetInfoPackage;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;

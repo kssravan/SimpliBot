@@ -98,6 +98,8 @@ target 'SimpliBot' do
   pod 'RNSound', :path => '../node_modules/react-native-sound'
 
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   post_install do |installer|
     flipper_post_install(installer)
   end

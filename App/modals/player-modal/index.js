@@ -59,6 +59,21 @@ export default class PlayerScreen extends React.Component {
             const filepath = this.props.filepath;
             console.log('[Play]', filepath);
 
+            setTimeout(() => {
+                this.sound = new Sound(filepath, '', (error) => {
+                    if (error) {
+                        console.log('failed to load the sound', error);
+                        Alert.alert('Notice', 'audio file error. (Error code : 1)');
+                        this.setState({ playState: 'paused' });
+                    }
+                });
+
+                setTimeout(() => {
+                    this.setState({ playState: 'playing', duration: this.sound.getDuration() });
+                    this.sound.play(this.playComplete);
+                }, 100);
+            }, 500);
+
             this.sound = new Sound(filepath, '', (error) => {
                 if (error) {
                     console.log('failed to load the sound', error);
@@ -127,7 +142,7 @@ export default class PlayerScreen extends React.Component {
                 }}
             >
 
-                <View style={{ height: '100%', justifyContent: 'center', backgroundColor: '#05375a' }}>
+                <View style={{justifyContent: 'center', backgroundColor: '#05375a', paddingBottom:40, paddingTop:40 }}>
                     <View style={{ flexDirection: 'row', justifyContent: 'center', marginVertical: 15 }}>
                         <TouchableOpacity onPress={this.jumpPrev15Seconds} style={{ justifyContent: 'center' }}>
                             <Image source={images.playjumpleft} style={{ width: 30, height: 30 }} />

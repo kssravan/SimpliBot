@@ -35,7 +35,9 @@ export default StyleSheet.create({
         marginTop: 10,
         borderBottomWidth: 1,
         borderBottomColor: colors.borderColor,
-        paddingBottom:5,
+        paddingBottom: 5,
+        alignItems: 'center',
+        justifyContent:'center'
     },
     textInput: {
         flex: 1,

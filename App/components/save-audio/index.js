@@ -4,7 +4,7 @@ import {Button} from '@app/components'
 
 const saveAudio = ({ value, onChange, onSubmit }) => {
     console.log("value is", value)
-    return <View style={{ padding: 20, width: '100%', height: '100%', alignItems: 'center', justifyContent: 'center', alignSelf: 'center' }}>
+    return <View style={{ padding: 20, width: '100%', alignItems: 'center', justifyContent: 'center', alignSelf: 'center' }}>
         <View style={{ width: '100%', borderBottomColor: '#ededed', borderBottomWidth: 2, padding: 16, }}>
             <TextInput
                 placeholder={'Like "Audio 1" or "Record 1"'}

@@ -10,12 +10,13 @@ const ModalHeader = (props) => {
         style={{
             justifyContent: 'flex-end',
             margin: 0,
+            flex: 1,
         }}
         onBackdropPress={() => {
             props.onBackDropPress()
         }}
     >
-        <View style={{ width: '100%', height: '40%', backgroundColor: colors.secondary, borderTopLeftRadius: 30, borderTopRightRadius: 30, paddingBottom: 60 }}>
+        <View style={{backgroundColor: colors.secondary, borderTopLeftRadius: 30, borderTopRightRadius: 30}}>
             <Header
                 title={props.title}
                 onClose={() => {

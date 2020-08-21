@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { View, Text, Linking, TouchableOpacity, TextInput } from 'react-native'
+import { View, Text, Linking, TouchableOpacity, TextInput, Platform } from 'react-native'
 import { Header, Icon, HeaderButton, HeaderIcon, Button, RecordingComponent, RecordingSaveComponent, ModalHeader } from '@app/components'
 import { request, PERMISSIONS, check } from 'react-native-permissions';
 import { metrics } from '@app/themes'
@@ -20,6 +20,7 @@ const RecordingContainer = (props) => {
     const [isMicrophoneDenied, setIsMicrophoneDenied] = useState(false)
     const [showDisplayNameContent, setShowDisplayNameContent] = useState(false)
     const [audioName, setAudioName] = useState("")
+    const [androidFileName, setAndroidFileName] = useState("")
 
     const dispatch = useDispatch()
 
@@ -175,12 +176,15 @@ const RecordingContainer = (props) => {
                 if (Platform.OS === 'ios') {
                     finishRecording(data.status === "OK", data.audioFileURL, data.audioFileSize);
                 }
+                else {
+                    setAndroidFileName(data.audioFileURL)
+                }
             };
         });
     }, [])
 
     saveRecording = () => {
-        console.log("audio path is", audioPath)
+        console.log("audio path is", audioPath, androidFileName)
         dispatch(Actions.saveRecordings({ fileName: audioName, filePath: audioPath, time: now(), reocrdedTime: currentTime }))
         props.closeRecordScreen()
     }
@@ -248,7 +252,7 @@ const RecordingContainer = (props) => {
             props.closeRecordScreen()
         }}
     > 
-            <View style={{ padding: 20, width: '100%', height: '80%', alignItems: 'center', justifyContent: 'center', alignSelf: 'center' }}>
+            <View style={{ padding: 20, width: '100%', alignItems: 'center', justifyContent: 'center', alignSelf: 'center', paddingTop:40, paddingBottom:80}}>
                 {renderMicroPhoneStatus()}
                 {renderRecordingComponent()}
                 {renderNameDisplayContent()}
