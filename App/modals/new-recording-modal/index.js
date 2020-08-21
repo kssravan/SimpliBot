@@ -194,7 +194,7 @@ const RecordingContainer = (props) => {
             return null
         }
 
-        return <View style={{ padding: 20, width: '100%', height: '80%', alignItems: 'center', justifyContent: 'center', alignSelf: 'center' }}>
+        return <View style={{ padding: 20, width: '100%', alignItems: 'center', justifyContent: 'center', alignSelf: 'center' }}>
             <Icon name="unlock" type="Feather" size={40} color="#05375a" />
             <Text>This app doesnt have access to micro phone</Text>
             <Button

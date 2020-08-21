@@ -55,5 +55,29 @@ for ios after that cd ios/ && pod install
 9. react-navigation & react-navigation-stack used to navigate between screens 
 10. redux-persist used to make the recording information persist even after the app is terminted
 
+![Alt text](/App/assets/images/reference/splash.png?raw=true "Splash Scren")
+
+![Alt text](/App/assets/images/reference/login.png?raw=true "Login Scren")
+
+![Alt text](/App/assets/images/reference/emailcheck.png?raw=true "Login Email Check")
+
+![Alt text](/App/assets/images/reference/emailcheckgreen.png?raw=true "Login Email Check Green")
+
+![Alt text](/App/assets/images/reference/passwordhidden.png?raw=true "Login Password")
+
+![Alt text](/App/assets/images/reference/passwordshow.png?raw=true "Login Password Show")
+
+![Alt text](/App/assets/images/reference/microphoneacess.png?raw=true "Microphone access")
+
+![Alt text](/App/assets/images/reference/microphonenotauthorized.png?raw=true "Microphone not authorized")
+
+![Alt text](/App/assets/images/reference/recordings.png?raw=true "Recordings list")
+
+![Alt text](/App/assets/images/reference/audioplayer.png?raw=true "Recordings list")
+
+
+
+
+
 
 
